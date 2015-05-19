@@ -134,7 +134,7 @@ _inherited from_: [src/js/component.js#L296](https://github.com/videojs/video.js
 ##### RETURNS: 
 * `Number` Returns the interval ID
 
-_inherited from_: [src/js/component.js#L1223](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1223)
+_inherited from_: [src/js/component.js#L1219](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1219)
 
 ---
 
@@ -147,7 +147,7 @@ _inherited from_: [src/js/component.js#L1223](https://github.com/videojs/video.j
 ##### RETURNS: 
 * `Number` Returns the timeout ID
 
-_inherited from_: [src/js/component.js#L1185](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1185)
+_inherited from_: [src/js/component.js#L1181](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1181)
 
 ---
 
@@ -232,7 +232,7 @@ _inherited from_: [src/js/component.js#L220](https://github.com/videojs/video.js
 > whenever touch events happen, and this can be turned off by components that
 > want touch events to act differently.
 
-_inherited from_: [src/js/component.js#L1124](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1124)
+_inherited from_: [src/js/component.js#L1120](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1120)
 
 ---
 
@@ -449,7 +449,7 @@ _inherited from_: [src/js/component.js#L577](https://github.com/videojs/video.js
 ##### PARAMETERS: 
 * __event__ `Object` Event object
 
-_inherited from_: [src/js/slider.js#L202](https://github.com/videojs/video.js/blob/master/src/js/slider.js#L202)
+_inherited from_: [src/js/slider.js#L197](https://github.com/videojs/video.js/blob/master/src/js/slider.js#L197)
 
 ---
 
@@ -584,7 +584,7 @@ _inherited from_: [src/js/component.js#L837](https://github.com/videojs/video.js
 ##### RETURNS: 
 * `Number` Returns the interval ID
 
-_inherited from_: [src/js/component.js#L1202](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1202)
+_inherited from_: [src/js/component.js#L1198](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1198)
 
 ---
 
@@ -598,7 +598,7 @@ _inherited from_: [src/js/component.js#L1202](https://github.com/videojs/video.j
 ##### RETURNS: 
 * `Number` Returns the timeout ID
 
-_inherited from_: [src/js/component.js#L1162](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1162)
+_inherited from_: [src/js/component.js#L1158](https://github.com/videojs/video.js/blob/master/src/js/component.js#L1158)
 
 ---
 

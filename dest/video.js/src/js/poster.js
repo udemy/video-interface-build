@@ -60,7 +60,10 @@ vjs.PosterImage.prototype.update = function(){
   // If there's no poster source we should display:none on this component
   // so it's not still clickable or right-clickable
   if (url) {
-    this.show();
+    // Remove the display style property that hide() adds
+    // as opposed to show() which sets display to block
+    // In the future it might be worth creating an `unhide` component method
+    this.el_.style.display = '';
   } else {
     this.hide();
   }

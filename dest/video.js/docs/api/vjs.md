@@ -30,9 +30,11 @@ The `vjs` function can be used to initialize or retrieve a player.
 - CLASSES
   - [BigPlayButton](vjs.BigPlayButton.md)
   - [Button](vjs.Button.md)
-  - [CaptionsButton](undefined.md)
-  - [ChaptersButton](undefined.md)
-  - [ChaptersTrackMenuItem](undefined.md)
+  - [CaptionsButton](vjs.CaptionsButton.md)
+  - [CaptionsTrack](vjs.CaptionsTrack.md)
+  - [ChaptersButton](vjs.ChaptersButton.md)
+  - [ChaptersTrack](vjs.ChaptersTrack.md)
+  - [ChaptersTrackMenuItem](vjs.ChaptersTrackMenuItem.md)
   - [Component](vjs.Component.md)
   - [ControlBar](vjs.ControlBar.md)
   - [CoreObject](vjs.CoreObject.md)
@@ -47,12 +49,12 @@ The `vjs` function can be used to initialize or retrieve a player.
   - [LoadingSpinner](vjs.LoadingSpinner.md)
   - [MediaError](vjs.MediaError.md)
   - [MediaLoader](vjs.MediaLoader.md)
-  - [MediaTechController](undefined.md)
+  - [MediaTechController](vjs.MediaTechController.md)
   - [Menu](vjs.Menu.md)
   - [MenuButton](vjs.MenuButton.md)
   - [MenuItem](vjs.MenuItem.md)
   - [MuteToggle](vjs.MuteToggle.md)
-  - [OffTextTrackMenuItem](undefined.md)
+  - [OffTextTrackMenuItem](vjs.OffTextTrackMenuItem.md)
   - [PlayProgressBar](vjs.PlayProgressBar.md)
   - [PlayToggle](vjs.PlayToggle.md)
   - [PlaybackRateMenuButton](vjs.PlaybackRateMenuButton.md)
@@ -65,10 +67,12 @@ The `vjs` function can be used to initialize or retrieve a player.
   - [SeekHandle](vjs.SeekHandle.md)
   - [Slider](vjs.Slider.md)
   - [SliderHandle](vjs.SliderHandle.md)
-  - [SubtitlesButton](undefined.md)
-  - [TextTrackButton](undefined.md)
-  - [TextTrackDisplay](undefined.md)
-  - [TextTrackMenuItem](undefined.md)
+  - [SubtitlesButton](vjs.SubtitlesButton.md)
+  - [SubtitlesTrack](vjs.SubtitlesTrack.md)
+  - [TextTrack](vjs.TextTrack.md)
+  - [TextTrackButton](vjs.TextTrackButton.md)
+  - [TextTrackDisplay](vjs.TextTrackDisplay.md)
+  - [TextTrackMenuItem](vjs.TextTrackMenuItem.md)
   - [TimeDivider](vjs.TimeDivider.md)
   - [VolumeBar](vjs.VolumeBar.md)
   - [VolumeControl](vjs.VolumeControl.md)
@@ -90,14 +94,14 @@ The `vjs` function can be used to initialize or retrieve a player.
 > All options should use string keys so they avoid
 > renaming by closure compiler
 
-_defined in_: [src/js/core.js#L92](https://github.com/videojs/video.js/blob/master/src/js/core.js#L92)
+_defined in_: [src/js/core.js#L76](https://github.com/videojs/video.js/blob/master/src/js/core.js#L76)
 
 ---
 
 ### players
 > Global player list
 
-_defined in_: [src/js/core.js#L164](https://github.com/videojs/video.js/blob/master/src/js/core.js#L164)
+_defined in_: [src/js/core.js#L147](https://github.com/videojs/video.js/blob/master/src/js/core.js#L147)
 
 ---
 
@@ -116,7 +120,7 @@ _defined in_: [src/js/core.js#L164](https://github.com/videojs/video.js/blob/mas
 ##### RETURNS: 
 * `Object` The resulting global languages dictionary object
 
-_defined in_: [src/js/core.js#L151](https://github.com/videojs/video.js/blob/master/src/js/core.js#L151)
+_defined in_: [src/js/core.js#L134](https://github.com/videojs/video.js/blob/master/src/js/core.js#L134)
 
 ---
 
@@ -129,7 +133,7 @@ _defined in_: [src/js/core.js#L151](https://github.com/videojs/video.js/blob/mas
 ##### RETURNS: 
 * `Object` An object of url details
 
-_defined in_: [src/js/lib.js#L676](https://github.com/videojs/video.js/blob/master/src/js/lib.js#L676)
+_defined in_: [src/js/lib.js#L666](https://github.com/videojs/video.js/blob/master/src/js/lib.js#L666)
 
 ---
 

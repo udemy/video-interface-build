@@ -6,60 +6,6 @@ _(none)_
 
 --------------------
 
-## 4.12.7 (2015-05-19)
-* @tjenkinson Added background-color to vjs-poster to remove transparent borders around scaled poster image ([view](https://github.com/videojs/video.js/pull/2138))
-* @bc-bbay fixed a bug where the player would try to autoplay when there was no source ([view](https://github.com/videojs/video.js/pull/2127))
-* @bc-bbay update time display on loadedmetadata ([view](https://github.com/videojs/video.js/pull/2151))
-* @dmlap update swf to 4.7 to pick up preload fix ([view](https://github.com/videojs/video.js/pull/2170))
-
-## 4.12.6 (2015-05-07)
-* @saxena-gaurav fixed a bug from disposing after changing techs ([view](https://github.com/videojs/video.js/pull/2125))
-
-## 4.12.5 (2015-03-17)
-* Updated to videojs-swf v4.5.4 to fix a potential security issue ([view](https://github.com/videojs/video.js/pull/1955))
-
-## 4.12.4 (2015-03-05)
-* Randomized the Google Analytics calls to stay under the limit ([view](https://github.com/videojs/video.js/pull/1916))
-
-## 4.12.3 (2015-02-28)
-* @heff fixed setting the source to an empty string ([view](https://github.com/videojs/video.js/pull/1905))
-
-## 4.12.2 (2015-02-27)
-* @gkatsev fixed disabling of default text tracks ([view](https://github.com/videojs/video.js/pull/1892))
-
-## 4.12.1 (2015-02-19)
-* @gkatsev fixed the track list reference while switching techs that use emulated tracks ([view](https://github.com/videojs/video.js/pull/1874))
-* @gkatsev fixed a Firefox error with the captions settings select menu options ([view](https://github.com/videojs/video.js/pull/1877))
-
-## 4.12.0 (2015-02-17)
-* @PeterDaveHello added a Traditional Chinese translation ([view](https://github.com/videojs/video.js/pull/1729))
-* @mmcc updated the hide/show functions to use a class instead of inline styles ([view](https://github.com/videojs/video.js/pull/1681))
-* @mister-ben added better handling of the additional videojs() arguments when the player is already initialized ([view](https://github.com/videojs/video.js/pull/1730))
-* @anhskohbo added a Vietnamese translation ([view](https://github.com/videojs/video.js/pull/1734))
-* @Sxmanek added a Czech translation ([view](https://github.com/videojs/video.js/pull/1739))
-* @jcaron23 added the vjs-scrubbing CSS class and prevented menus from showing while scrubbing ([view](https://github.com/videojs/video.js/pull/1741))
-* @dmlap fixed URL parsing in IE9 ([view](https://github.com/videojs/video.js/pull/1765))
-* @gkatsev Fixed issue where ManualTimeUpdatesOff was not de-registering events ([view](https://github.com/videojs/video.js/pull/1793))
-* @brycefisher Added a guide on player disposal ([view](https://github.com/videojs/video.js/pull/1803))
-* @toniher added a Catalan translation ([view](https://github.com/videojs/video.js/pull/1794))
-* @mmcc added a VERSION key to the videojs object ([view](https://github.com/videojs/video.js/pull/1798))
-* @mmcc fixed an issue with text track hiding introduced in #1681 ([view](https://github.com/videojs/video.js/pull/1804))
-* @dmlap exported video.js as a named AMD module ([view](https://github.com/videojs/video.js/pull/1844))
-* @dmlap fixed poster hiding when the loadstart event does not fire ([view](https://github.com/videojs/video.js/pull/1834))
-* @chikathreesix fixed an object delete error in Chrome ([view](https://github.com/videojs/video.js/pull/1858))
-* @steverandy fixed an issue with scrolling over the player on touch devices ([view](https://github.com/videojs/video.js/pull/1809))
-* @mmcc improved tap sensitivity ([view](https://github.com/videojs/video.js/pull/1830))
-* @mister-ben added a vjs-ended class when playback reaches the end of the timeline ([view](https://github.com/videojs/video.js/pull/1857))
-* @dmlap Add network and ready state properties ([view](https://github.com/videojs/video.js/pull/1854))
-* @woollybogger exported the hasClass function ([view](https://github.com/videojs/video.js/pull/1839))
-* @DevGavin fixed the Chinese translation ([view](https://github.com/videojs/video.js/pull/1841))
-* @iSimonWeb added font-path variable ([view](https://github.com/videojs/video.js/pull/1847))
-* @shoshomiga added a Bulgarian translation ([view](https://github.com/videojs/video.js/pull/1849))
-* @ragecub3 added a Turkish translation ([view](https://github.com/videojs/video.js/pull/1853))
-* @gkatsev greatly improved text track support and implemented vtt.js as the webvtt parser ([view](https://github.com/videojs/video.js/pull/1749))
-* @gkatsev fixed captions showing by default in Chrome and Safari ([view](https://github.com/videojs/video.js/pull/1865))
-* @mister-ben fixed a woff warning in Firefox ([view](https://github.com/videojs/video.js/pull/1870))
-
 ## 4.11.4 (2015-01-23)
 * @heff exported missing source handler functions ([view](https://github.com/videojs/video.js/pull/1787))
 * @heff fixed type support checking for an empty src string ([view](https://github.com/videojs/video.js/pull/1797))
@@ -98,7 +44,7 @@ _(none)_
 * @mmcc fixed localization of captions/subtitles menu off buttons ([view](https://github.com/videojs/video.js/pull/1632))
 
 ## 4.10.1 (2014-10-29)
-@heff removed his own stupid error [view](https://github.com/videojs/video.js/commit/a12dd770572a7f16e436e2332eba7ffbb1f1b9b9)
+@heff removed his own stupid error ([view])(https://github.com/videojs/video.js/commit/a12dd770572a7f16e436e2332eba7ffbb1f1b9b9)
 
 ## 4.10.0 (2014-10-28)
 * @aptx4869 fixed an issue where the native JSON parser wasn&#x27;t used ([view](https://github.com/videojs/video.js/pull/1565))

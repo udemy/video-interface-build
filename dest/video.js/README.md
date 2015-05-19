@@ -1,6 +1,6 @@
 ![Video.js logo](https://i.cloudup.com/C3nAUZ-l4c.png)
 
-# [Video.js - HTML5 Video Player](http://videojs.com)  [![Build Status](https://travis-ci.org/videojs/video.js.svg?branch=master)](https://travis-ci.org/videojs/video.js)
+# [Video.js - HTML5 Video Player](http://videojs.com)  [![Build Status](https://travis-ci.org/videojs/video.js.png?branch=master)](https://travis-ci.org/videojs/video.js)
 
 > Video.js is a web video player built from the ground up for an HTML5 world. It supports HTML5 and Flash video, as well as YouTube and Vimeo (through [plugins](https://github.com/videojs/video.js/wiki/Plugins)). It supports video playback on desktops and mobile devices. This project was started mid 2010, and the player is now used on over ~~50,000~~ 100,000 websites.
 
@@ -9,8 +9,8 @@ Thanks to the awesome folks over at [Fastly](http://www.fastly.com/), there's a 
 `<head>`:
 
 ```html
-<link href="http://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
-<script src="http://vjs.zencdn.net/4.11/video.js"></script>
+<link href="http://vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/4.10/video.js"></script>
 ```
 
 Then, whenever you want to use Video.js you can simply use the `<video>` element as your normally would, but with an additional `data-setup` attribute containing any Video.js options. These options

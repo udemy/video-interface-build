@@ -245,8 +245,6 @@ vjs.getData = function(el){
   var id = el[vjs.expando];
   if (!id) {
     id = el[vjs.expando] = vjs.guid++;
-  }
-  if (!vjs.cache[id]) {
     vjs.cache[id] = {};
   }
   return vjs.cache[id];
@@ -359,13 +357,6 @@ vjs.removeClass = function(element, classToRemove){
  * @private
  */
 vjs.TEST_VID = vjs.createEl('video');
-(function() {
-  var track = document.createElement('track');
-  track.kind = 'captions';
-  track.srclang = 'en';
-  track.label = 'English';
-  vjs.TEST_VID.appendChild(track);
-})();
 
 /**
  * Useragent for browser testing.
@@ -419,7 +410,6 @@ vjs.IS_OLD_ANDROID = vjs.IS_ANDROID && (/webkit/i).test(vjs.USER_AGENT) && vjs.A
 
 vjs.IS_FIREFOX = (/Firefox/i).test(vjs.USER_AGENT);
 vjs.IS_CHROME = (/Chrome/i).test(vjs.USER_AGENT);
-vjs.IS_IE8 = (/MSIE\s8\.0/).test(vjs.USER_AGENT);
 
 vjs.TOUCH_ENABLED = !!(('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch);
 vjs.BACKGROUND_SIZE_SUPPORTED = 'backgroundSize' in vjs.TEST_VID.style;
@@ -700,15 +690,6 @@ vjs.parseUrl = function(url) {
   details = {};
   for (var i = 0; i < props.length; i++) {
     details[props[i]] = a[props[i]];
-  }
-
-  // IE9 adds the port to the host property unlike everyone else. If
-  // a port identifier is added for standard ports, strip it.
-  if (details.protocol === 'http:') {
-    details.host = details.host.replace(/:80$/, '');
-  }
-  if (details.protocol === 'https:') {
-    details.host = details.host.replace(/:443$/, '');
   }
 
   if (addToBody) {

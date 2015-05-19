@@ -845,7 +845,7 @@ vjs.Component.prototype.removeClass = function(classToRemove){
  * @return {vjs.Component}
  */
 vjs.Component.prototype.show = function(){
-  this.removeClass('vjs-hidden');
+  this.el_.style.display = 'block';
   return this;
 };
 
@@ -855,7 +855,7 @@ vjs.Component.prototype.show = function(){
  * @return {vjs.Component}
  */
 vjs.Component.prototype.hide = function(){
-  this.addClass('vjs-hidden');
+  this.el_.style.display = 'none';
   return this;
 };
 
@@ -1031,23 +1031,19 @@ vjs.Component.prototype.onResize;
  */
 vjs.Component.prototype.emitTapEvents = function(){
   var touchStart, firstTouch, touchTime, couldBeTap, noTap,
-      xdiff, ydiff, touchDistance, tapMovementThreshold, touchTimeThreshold;
+      xdiff, ydiff, touchDistance, tapMovementThreshold;
 
   // Track the start time so we can determine how long the touch lasted
   touchStart = 0;
   firstTouch = null;
 
   // Maximum movement allowed during a touch event to still be considered a tap
-  // Other popular libs use anywhere from 2 (hammer.js) to 15, so 10 seems like a nice, round number.
-  tapMovementThreshold = 10;
-
-  // The maximum length a touch can be while still being considered a tap
-  touchTimeThreshold = 200;
+  tapMovementThreshold = 22;
 
   this.on('touchstart', function(event) {
     // If more than one finger, don't consider treating this as a click
     if (event.touches.length === 1) {
-      firstTouch = vjs.obj.copy(event.touches[0]);
+      firstTouch = event.touches[0];
       // Record start time so we can detect a tap vs. "touch and hold"
       touchStart = new Date().getTime();
       // Reset couldBeTap tracking
@@ -1086,8 +1082,8 @@ vjs.Component.prototype.emitTapEvents = function(){
     if (couldBeTap === true) {
       // Measure how long the touch lasted
       touchTime = new Date().getTime() - touchStart;
-      // Make sure the touch was less than the threshold to be considered a tap
-      if (touchTime < touchTimeThreshold) {
+      // The touch needs to be quick in order to consider it a tap
+      if (touchTime < 250) {
         event.preventDefault(); // Don't let browser turn this into a click
         this.trigger('tap');
         // It may be good to copy the touchend event object and change the
