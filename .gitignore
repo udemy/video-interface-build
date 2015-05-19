@@ -1,0 +1,5 @@
+node_modules/
+.idea/
+packages/
+.DS_Store
+video-interface-build.iml

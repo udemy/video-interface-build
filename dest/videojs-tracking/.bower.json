@@ -1,0 +1,13 @@
+{
+  "name": "videojs-tracking",
+  "homepage": "https://github.com/burakbostancioglu/videojs-tracking",
+  "_release": "0fa4a6b60a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0fa4a6b60a11b49b8ac227ba3e5eda7cf57d3d7f"
+  },
+  "_source": "https://github.com/burakbostancioglu/videojs-tracking.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/burakbostancioglu/videojs-tracking.git"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "videojs-resolution-selector",
+  "description": "Adds a resolution selector button to Video.js to allow users to manually adjust the video quality.",
+  "main": [
+    "video-quality-selector.js",
+    "video-quality-selector.css"
+  ],
+  "ignore": [
+    "**/*"
+  ],
+  "dependencies": {
+    "video.js": "^4.2"
+  },
+  "homepage": "https://github.com/dominic-p/videojs-resolution-selector",
+  "_release": "c8dfa7780a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c8dfa7780a738013a4c22ffe2d2629da873256ba"
+  },
+  "_source": "https://github.com/dominic-p/videojs-resolution-selector.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/dominic-p/videojs-resolution-selector.git"
+}

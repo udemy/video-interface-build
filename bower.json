@@ -1,0 +1,25 @@
+{
+    "name": "udemy/website",
+    "version": "0.0.1",
+    "homepage": "https://github.com/udemy/video-interface-build",
+    "authors": [
+        {
+            "name": "Udemy Developers",
+            "email": "dev@udemy.com"
+        }
+    ],
+    "description": "Udemy's video interface build.",
+    "license": "copyright © 2015 Udemy, Inc",
+    "private": false,
+    "ignore": [
+        "**/.*",
+        "node_modules"
+    ],
+    "dependencies": {
+        "video.js": "https://github.com/videojs/video.js.git",
+        "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git",
+        "videojs-tracking": "https://github.com/burakbostancioglu/videojs-tracking.git",
+        "videojs-resolution-selector": "https://github.com/dominic-p/videojs-resolution-selector.git"
+    }
+
+}
