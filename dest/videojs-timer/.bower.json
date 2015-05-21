@@ -1,11 +1,11 @@
 {
   "name": "videojs-timer",
   "homepage": "https://github.com/burakbostancioglu/videojs-timer",
-  "_release": "54517262d0",
+  "_release": "572bcf040f",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "54517262d076c1378ffc83cffab1982069f85f78"
+    "commit": "572bcf040f0414fdc572b4cbe32244eec8094a7c"
   },
   "_source": "https://github.com/burakbostancioglu/videojs-timer.git",
   "_target": "*",
