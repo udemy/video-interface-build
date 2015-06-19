@@ -9,14 +9,14 @@
     "**/*"
   ],
   "dependencies": {
-    "video.js": "^4.2"
+    "video.js": "^4.7"
   },
   "homepage": "https://github.com/dominic-p/videojs-resolution-selector",
-  "_release": "c8dfa7780a",
+  "_release": "48950575e7",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "c8dfa7780a738013a4c22ffe2d2629da873256ba"
+    "commit": "48950575e7c01c1e200cf1b6db312dff13874d41"
   },
   "_source": "https://github.com/dominic-p/videojs-resolution-selector.git",
   "_target": "*",

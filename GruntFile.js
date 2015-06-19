@@ -6,7 +6,16 @@ module.exports = function(grunt) {
         uglify: {
             videojs: {
                 files: {
-                    'build/video-interface-build.min.js': ['dest/video.js/dist/video-js/video.js', 'dest/videojs-resolution-selector/video-quality-selector.js', 'dest/videojs-timer/lib/videojs-timer.js', 'dest/videojs-tracking/lib/videojs-tracking.js']
+                    'build/video-interface-build.min.js': [
+                        'dest/video.js/dist/video-js/video.dev.js', 
+                        'dest/videojs-resolution-selector/video-quality-selector.js', 
+                        'dest/videojs-timer/lib/videojs-timer.js', 
+                        'dest/videojs-tracking/lib/videojs-tracking.js',
+                    ]
+                },
+                options: {
+                    sourceMap: true,
+                    sourceMapIncludeSources: true
                 }
             }
         },
@@ -29,7 +38,11 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'build/video-interface-build.min.css': ['dest/video.js/dist/video-js/video-js.css', 'dest/videojs-resolution-selector/video-quality-selector.css']
+                    'build/video-interface-build.min.css': [
+                        'dest/video.js/dist/video-js/video-js.css', 
+                        'dest/videojs-resolution-selector/video-quality-selector.css',
+                        'dest/videojs-info-overlay/lib/videojs-info-overlay.css'
+                    ]
                 }
             }
         },
