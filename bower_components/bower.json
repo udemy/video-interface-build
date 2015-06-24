@@ -18,7 +18,6 @@
     "dependencies": {
         "video.js": "4.11.4",
         "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git",
-        "videojs-tracking": "https://github.com/burakbostancioglu/videojs-tracking.git",
         "videojs-resolution-selector": "https://github.com/dominic-p/videojs-resolution-selector.git"
     }
 

@@ -10,7 +10,6 @@ module.exports = function(grunt) {
                         'dest/video.js/dist/video-js/video.dev.js', 
                         'dest/videojs-resolution-selector/video-quality-selector.js', 
                         'dest/videojs-timer/lib/videojs-timer.js', 
-                        'dest/videojs-tracking/lib/videojs-tracking.js',
                     ]
                 },
                 options: {
