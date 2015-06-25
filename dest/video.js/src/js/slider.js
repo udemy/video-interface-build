@@ -51,6 +51,7 @@ vjs.Slider.prototype.onMouseDown = function(event){
   this.on(document, 'mouseup', this.onMouseUp);
   this.on(document, 'touchmove', this.onMouseMove);
   this.on(document, 'touchend', this.onMouseUp);
+  this.on(document, 'mouseout', this.onMouseUp);
 
   this.onMouseMove(event);
 };

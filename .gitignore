@@ -4,3 +4,4 @@ packages/
 .DS_Store
 video-interface-build.iml
 bower_components
+intermediate/

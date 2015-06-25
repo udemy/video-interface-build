@@ -10,6 +10,7 @@ module.exports = function(grunt) {
                         'dest/video.js/dist/video-js/video.dev.js', 
                         'dest/videojs-resolution-selector/video-quality-selector.js', 
                         'dest/videojs-timer/lib/videojs-timer.js', 
+                        'dest/videojs-speedcontroller/lib/videojs-speedcontroller.js',
                     ]
                 },
                 options: {
@@ -30,17 +31,25 @@ module.exports = function(grunt) {
                 }
             }
         },
+        less: {
+          videojs: {
+            files: {
+              'intermediate/videojs-speedcontroller.css': 'dest/videojs-speedcontroller/lib/videojs-speedcontroller.less',
+            }
+          }
+        },
         cssmin: {
             options: {
                 shorthandCompacting: false,
-                roundingPrecision: -1
+                roundingPrecision: -1,
+                sourceMap: true
             },
             target: {
                 files: {
                     'build/video-interface-build.min.css': [
                         'dest/video.js/dist/video-js/video-js.css', 
                         'dest/videojs-resolution-selector/video-quality-selector.css',
-                        'dest/videojs-info-overlay/lib/videojs-info-overlay.css'
+                        'intermediate/videojs-speedcontroller.css',
                     ]
                 }
             }
@@ -61,6 +70,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-less');
     // Default task(s).
-    grunt.registerTask('default', ['bower-install-simple', 'uglify:videojs', 'cssmin', 'copy']);
+    grunt.registerTask('default', ['bower-install-simple', 'uglify:videojs', 'less', 'cssmin', 'copy']);
 };
