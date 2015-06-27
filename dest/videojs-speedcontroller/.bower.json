@@ -1,11 +1,11 @@
 {
   "name": "videojs-speedcontroller",
   "homepage": "https://github.com/udemy/videojs-speedcontroller",
-  "_release": "f7c5ad696d",
+  "_release": "5783638fb7",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "f7c5ad696d233a3c7bd59cc2dc15d5a5b8df4b81"
+    "commit": "5783638fb7c0b742e5766619c4d4008e720ff707"
   },
   "_source": "https://github.com/udemy/videojs-speedcontroller.git",
   "_target": "*",

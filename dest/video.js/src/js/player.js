@@ -1618,6 +1618,7 @@ vjs.Player.prototype.listenForUserActivity = function(){
 vjs.Player.prototype.playbackRate = function(rate) {
   if (rate !== undefined) {
     this.techCall('setPlaybackRate', rate);
+    this.trigger('playbackRateChange');
     return this;
   }
 

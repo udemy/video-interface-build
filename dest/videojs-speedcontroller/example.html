@@ -5,6 +5,7 @@
   <title>Video.js Speed Controller</title>
 
   <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="lib/videojs-speedcontroller.less">
 
   <style>
     body {
@@ -40,10 +41,12 @@
     <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
   </video>
   <script src="video.dev.js"></script>
-  <script src="videojs-speedcontroller.js"></script>
+  <script src="lib/videojs-speedcontroller.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.js"></script>
   <script>
     // fire up the plugin
 videojs('video', {
+    'playbackRates': [0.5, 1, 1.5, 2, 3, 4],
     'plugins':{
         "speedcontroller": {onScreen:true}
     }
