@@ -45,12 +45,7 @@
         });
 
         speedControl.appendChild(speedNumber);
-
-        /*
-        this.on(speedControl, 'playbackRateChanged', function() {
-            speedNumber.setHTML(this.playbackRate());
-        });
-        */
+        this.speedNumber = speedNumber;
 
         var speedAdjust = createElement('div',{
             className: 'speed-adjust-wrap'
@@ -128,6 +123,10 @@
     var speedController = new videojs.SpeedContainer( this, settings );
     speedController.currentSpeed  = 1;
     this.controlBar.addChild(speedController);
+    this.on('playbackRateChange', function() {
+        speedController.speedNumber.innerHTML = this.playbackRate()+'x';
+    });
+    speedController.speedNumber.innerHTML = this.playbackRate()+'x';
   };
 
   // register the plugin
