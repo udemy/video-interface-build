@@ -767,7 +767,7 @@ vjs.OffTextTrackMenuItem = vjs.TextTrackMenuItem.extend({
     options['track'] = {
       kind: function() { return options['kind']; },
       player: player,
-      label: function(){ return options['kind'] + ' off'; },
+      label: function(){ return options['label'] || (options['kind'] + ' off'); },
       dflt: function(){ return false; },
       mode: function(){ return false; }
     };
@@ -841,8 +841,13 @@ vjs.TextTrackButton = vjs.MenuButton.extend({
 vjs.TextTrackButton.prototype.createItems = function(){
   var items = [], track;
 
+  // Add a label
+  items.push(new vjs.OffTextTrackMenuItem(
+    this.player_, { 'kind': this.kind_, 'label': 'Closed captions' }
+  ));
+
   // Add an OFF menu item to turn all tracks off
-  items.push(new vjs.OffTextTrackMenuItem(this.player_, { 'kind': this.kind_ }));
+  items.push(new vjs.OffTextTrackMenuItem(this.player_, { 'kind': this.kind_, 'label': 'None' }));
 
   for (var i = 0; i < this.player_.textTracks().length; i++) {
     track = this.player_.textTracks()[i];
