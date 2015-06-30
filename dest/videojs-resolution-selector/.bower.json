@@ -11,14 +11,14 @@
   "dependencies": {
     "video.js": "^4.7"
   },
-  "homepage": "https://github.com/dominic-p/videojs-resolution-selector",
-  "_release": "48950575e7",
+  "homepage": "https://github.com/udemy/videojs-resolution-selector",
+  "_release": "1bd97f1f2e",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "48950575e7c01c1e200cf1b6db312dff13874d41"
+    "commit": "1bd97f1f2eb4ef40e2a8b28e38e94aecb9ebc766"
   },
-  "_source": "https://github.com/dominic-p/videojs-resolution-selector.git",
+  "_source": "https://github.com/udemy/videojs-resolution-selector.git",
   "_target": "*",
-  "_originalSource": "https://github.com/dominic-p/videojs-resolution-selector.git"
+  "_originalSource": "https://github.com/udemy/videojs-resolution-selector.git"
 }
