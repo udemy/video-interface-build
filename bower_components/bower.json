@@ -1,25 +1,24 @@
 {
-    "name": "udemy/website",
-    "version": "0.0.1",
-    "homepage": "https://github.com/udemy/video-interface-build",
     "authors": [
         {
-            "name": "Udemy Developers",
-            "email": "dev@udemy.com"
+            "email": "dev@udemy.com", 
+            "name": "Udemy Developers"
         }
-    ],
-    "description": "Udemy's video interface build.",
-    "license": "copyright © 2015 Udemy, Inc",
-    "private": false,
-    "ignore": [
-        "**/.*",
-        "node_modules"
-    ],
+    ], 
     "dependencies": {
-        "video.js": "https://github.com/udemy/video.js.git#4.11.5-3",
-        "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git",
-        "videojs-resolution-selector": "https://github.com/dominic-p/videojs-resolution-selector.git",
-        "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git"
-    }
-
+        "video.js": "https://github.com/udemy/video.js.git#4.11.5-3", 
+        "videojs-resolution-selector": "https://github.com/dominic-p/videojs-resolution-selector.git", 
+        "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git", 
+        "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git"
+    }, 
+    "description": "Udemy's video interface build.", 
+    "homepage": "https://github.com/udemy/video-interface-build", 
+    "ignore": [
+        "**/.*", 
+        "node_modules"
+    ], 
+    "license": "copyright \u00a9 2015 Udemy, Inc", 
+    "name": "udemy/website", 
+    "private": false, 
+    "version": "0.0.1"
 }
