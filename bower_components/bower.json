@@ -16,7 +16,7 @@
         "node_modules"
     ],
     "dependencies": {
-        "video.js": "https://github.com/udemy/video.js.git#4.11.5-2",
+        "video.js": "https://github.com/udemy/video.js.git#4.11.5-3",
         "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git",
         "videojs-resolution-selector": "https://github.com/dominic-p/videojs-resolution-selector.git",
         "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git"

@@ -1,7 +1,7 @@
 {
   "name": "video.js",
   "description": "An HTML5 and Flash video player with a common API and skin for both.",
-  "version": "4.11.5-2",
+  "version": "4.11.5-3",
   "main": [
     "dist/video-js/video.js",
     "dist/video-js/video-js.css",
@@ -26,13 +26,13 @@
     "build"
   ],
   "homepage": "https://github.com/udemy/video.js",
-  "_release": "4.11.5-2",
+  "_release": "4.11.5-3",
   "_resolution": {
     "type": "version",
-    "tag": "v4.11.5-2",
-    "commit": "dc6a6102f6c18275f6b6ac67cc18c7faf9468583"
+    "tag": "v4.11.5-3",
+    "commit": "1c1af378cb8254d07005ff60783959e15f8790bd"
   },
   "_source": "https://github.com/udemy/video.js.git",
-  "_target": "4.11.5-2",
+  "_target": "4.11.5-3",
   "_originalSource": "https://github.com/udemy/video.js.git"
 }
