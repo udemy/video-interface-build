@@ -102,7 +102,7 @@
 			this.event_name = options.event_name;
 
 			// Register our click and tap handlers
-			this.on( ['click', 'tap'], this.onClick );
+			this.on( 'click', this.onClick );
 		}
 	});
 	_V_.ResolutionExtraMenuItem.prototype.onClick = function() {
