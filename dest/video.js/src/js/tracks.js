@@ -841,11 +841,6 @@ vjs.TextTrackButton = vjs.MenuButton.extend({
 vjs.TextTrackButton.prototype.createItems = function(){
   var items = [], track;
 
-  // Add a label
-  items.push(new vjs.OffTextTrackMenuItem(
-    this.player_, { 'kind': this.kind_, 'label': 'Closed captions' }
-  ));
-
   // Add an OFF menu item to turn all tracks off
   items.push(new vjs.OffTextTrackMenuItem(this.player_, { 'kind': this.kind_, 'label': 'None' }));
 
