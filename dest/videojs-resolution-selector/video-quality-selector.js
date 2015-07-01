@@ -33,7 +33,7 @@
 		
 		set_event : function( menu_item, event_name ) {
 			
-			menu_item.on('click', function() {
+			menu_item.on( 'click', function() {
 				this.player().trigger( event_name );
 			});
 		}
@@ -177,7 +177,8 @@
 		// Add an item for each extra link
 		for ( var i = 0; i < extra_links.length; i++ ) {
 			item = new _V_.MenuItem( player, { label: extra_links[i].name } );
-			methods.set_event(item, extra_links[i].event);
+			item.off( 'click' );
+			methods.set_event( item, extra_links[i].event );
 			items.push(item);
 		}
 		
