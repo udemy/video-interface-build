@@ -29,6 +29,13 @@
 		res_label : function( res ) {
 			
 			return ( /^\d+$/.test( res ) ) ? res + 'p' : res;
+		},
+		
+		set_event : function( menu_item, event_name ) {
+			
+			menu_item.on('click', function() {
+				this.player().trigger( event_name );
+			});
 		}
 	};
 	
@@ -88,48 +95,6 @@
 		// Increment the call counter
 		this.call_count++;
 	};
-
-	/***********************************************************************************
-	 * Setup our resolution extra menu items
-	 ***********************************************************************************/
-	_V_.ResolutionExtraMenuItem = _V_.MenuItem.extend({
-		
-		// Call variable to prevent the click handler from being called twice
-		call_count : 0,
-		
-		/** @constructor */
-		init : function( player, options ){
-
-			// Call the parent constructor
-			_V_.MenuItem.call( this, player, options );
-			
-			// Store the event_name as a property
-			this.event_name = options.event_name;
-
-			// Register our click and tap handlers
-			this.on( ['click', 'tap'], this.onClick );
-			
-			// Toggle the selected class whenever the resolution changes
-			player.on( this.event_name, _V_.bind( this, function() {
-				
-				// Reset the call count
-				this.call_count = 0;
-			}));
-		}
-	});
-	
-	// Handle clicks on the extra menu items
-	_V_.ResolutionExtraMenuItem.prototype.onClick = function() {
-		
-		// Check if this has already been called and make sure there is an event to fire
-		if ( this.call_count > 0 || !this.event_name ) { return; }
-		
-		// Increment the call counter
-		this.call_count++;
-		
-		// Fire the event
-		this.player().trigger(this.event_name);
-	};
 	
 	/***********************************************************************************
 	 * Setup our resolution menu title item
@@ -172,7 +137,7 @@
 	_V_.ResolutionSelector.prototype.createItems = function() {
 		
 		var player = this.player(),
-			items = [],
+			item, items = [], extra_links = this.options().extra_links,
 			current_res;
 		
 		// Add the menu title item
@@ -210,14 +175,10 @@
 		});
 
 		// Add an item for each extra link
-		var extra_links = this.options().extra_links;
-		for ( var i=0; i<extra_links.length; i++ ) {
-			var extra_link = extra_links[i];
-			var menuItem = new _V_.ResolutionExtraMenuItem( player, {
-				label: extra_link.name,
-				event_name: extra_link.event
-			});
-			items.push( menuItem );
+		for ( var i = 0; i < extra_links.length; i++ ) {
+			item = new _V_.MenuItem( player, { label: extra_links[i].name } );
+			methods.set_event(item, extra_links[i].event);
+			items.push(item);
 		}
 		
 		return items;
