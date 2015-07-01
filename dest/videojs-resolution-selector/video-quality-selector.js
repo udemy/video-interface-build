@@ -177,6 +177,7 @@
 		// Add an item for each extra link
 		for ( var i = 0; i < extra_links.length; i++ ) {
 			item = new _V_.MenuItem( player, { label: extra_links[i].name } );
+			item.el().className += ' vjs-res-menu-extra-item';
 			item.off( 'click' );
 			methods.set_event( item, extra_links[i].event );
 			items.push(item);
