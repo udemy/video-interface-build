@@ -124,11 +124,11 @@
 		// Check if this has already been called and make sure there is an event to fire
 		if ( this.call_count > 0 || !this.event_name ) { return; }
 		
-		// Fire the event
-		this.player().trigger(this.event_name);
-		
 		// Increment the call counter
 		this.call_count++;
+		
+		// Fire the event
+		this.player().trigger(this.event_name);
 	};
 	
 	/***********************************************************************************
