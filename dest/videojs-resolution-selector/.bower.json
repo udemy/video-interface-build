@@ -12,11 +12,11 @@
     "video.js": "^4.7"
   },
   "homepage": "https://github.com/udemy/videojs-resolution-selector",
-  "_release": "407108bf02",
+  "_release": "9fee9d217d",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "407108bf021ec828bd3ca2c77c4cf082d98acb5f"
+    "commit": "9fee9d217d8ad4ef70943cfdaba4147e1a6a7a5a"
   },
   "_source": "https://github.com/udemy/videojs-resolution-selector.git",
   "_target": "*",

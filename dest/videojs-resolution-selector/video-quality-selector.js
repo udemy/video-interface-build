@@ -90,9 +90,14 @@
 	};
 
 	/***********************************************************************************
-	 * Setup our resolution extra items
+	 * Setup our resolution extra menu items
 	 ***********************************************************************************/
 	_V_.ResolutionExtraMenuItem = _V_.MenuItem.extend({
+		
+		// Call variable to prevent the click handler from being called twice
+		call_count : 0,
+		
+		/** @constructor */
 		init : function( player, options ){
 
 			// Call the parent constructor
@@ -102,13 +107,28 @@
 			this.event_name = options.event_name;
 
 			// Register our click and tap handlers
-			this.on( 'click', this.onClick );
+			this.on( ['click', 'tap'], this.onClick );
+			
+			// Toggle the selected class whenever the resolution changes
+			player.on( this.event_name, _V_.bind( this, function() {
+				
+				// Reset the call count
+				this.call_count = 0;
+			}));
 		}
 	});
+	
+	// Handle clicks on the extra menu items
 	_V_.ResolutionExtraMenuItem.prototype.onClick = function() {
-		if ( this.event_name ) {
-			this.player().trigger(this.event_name);
-		}
+		
+		// Check if this has already been called and make sure there is an event to fire
+		if ( this.call_count > 0 || !this.event_name ) { return; }
+		
+		// Fire the event
+		this.player().trigger(this.event_name);
+		
+		// Increment the call counter
+		this.call_count++;
 	};
 	
 	/***********************************************************************************
@@ -225,7 +245,7 @@
 				
 				default_res	: '',		// (string)	The resolution that should be selected by default ( '480' or  '480,1080,240' )
 				force_types	: false,	// (array)	List of media types. If passed, we need to have source for each type in each resolution or that resolution will not be an option
-				extra_links : []		// (array)  List of extra links. Each link is an object {"name": name of the link, "event": name of the event to trigger on click}.
+				extra_links	: []		// (array)	List of extra links. Each link is an object {"name": name of the link, "event": name of the event to trigger on click}.
 				
 			}, options || {} ),
 			
