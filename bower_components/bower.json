@@ -7,7 +7,7 @@
     ], 
     "dependencies": {
         "video.js": "https://github.com/udemy/video.js.git#f85a6284349f1938dd1801619954973b8f6fbca9", 
-        "videojs-resolution-selector": "https://github.com/udemy/videojs-resolution-selector.git", 
+        "videojs-resolution-selector": "https://github.com/udemy/videojs-resolution-selector.git#126f796154329e7b8c6b6e38a219a1014fdfbb63", 
         "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git", 
         "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git"
     }, 

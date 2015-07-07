@@ -280,9 +280,6 @@
 			}
 		}
 		
-		// Make sure we have at least 2 available resolutions before we add the button
-		if ( available_res.length < 2 ) { return; }
-		
 		// Loop through the choosen default resolutions if there were any
 		for ( i = 0; i < default_resolutions.length; i++ ) {
 			
