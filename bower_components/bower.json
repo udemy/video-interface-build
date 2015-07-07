@@ -6,7 +6,7 @@
         }
     ], 
     "dependencies": {
-        "video.js": "https://github.com/udemy/video.js.git#4.11.5-3", 
+        "video.js": "https://github.com/udemy/video.js.git#f85a6284349f1938dd1801619954973b8f6fbca9", 
         "videojs-resolution-selector": "https://github.com/udemy/videojs-resolution-selector.git", 
         "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git", 
         "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git"
@@ -20,5 +20,8 @@
     "license": "copyright \u00a9 2015 Udemy, Inc", 
     "name": "udemy/website", 
     "private": false, 
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "resolutions": {
+        "video.js": "f85a6284349f1938dd1801619954973b8f6fbca9"
+    }
 }

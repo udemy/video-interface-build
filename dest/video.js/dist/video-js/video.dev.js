@@ -3049,7 +3049,7 @@ vjs.Slider.prototype.onMouseDown = function(event){
   this.on(document, 'mouseup', this.onMouseUp);
   this.on(document, 'touchmove', this.onMouseMove);
   this.on(document, 'touchend', this.onMouseUp);
-  // this.on(document, 'mouseout', this.onMouseUp);
+  this.on(document, 'mouseleave', this.onMouseUp);
 
   this.onMouseMove(event);
 };
@@ -3065,6 +3065,7 @@ vjs.Slider.prototype.onMouseUp = function() {
   this.off(document, 'mouseup', this.onMouseUp);
   this.off(document, 'touchmove', this.onMouseMove);
   this.off(document, 'touchend', this.onMouseUp);
+  this.off(document, 'mouseleave', this.onMouseUp);
 
   this.update();
 };
