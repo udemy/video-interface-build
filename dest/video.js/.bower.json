@@ -30,7 +30,7 @@
   "_resolution": {
     "type": "version",
     "tag": "v4.11.5-3",
-    "commit": "1c1af378cb8254d07005ff60783959e15f8790bd"
+    "commit": "e24e4c90996924adb526f83fa913fbf2b5f72e21"
   },
   "_source": "https://github.com/udemy/video.js.git",
   "_target": "4.11.5-3",
