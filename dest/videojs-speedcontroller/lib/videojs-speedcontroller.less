@@ -22,7 +22,10 @@
 
 .justify-content-center {
     -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-flex-pack: center;
     -ms-justify-content: center;
+    -o-justify-content: center;
     justify-content: center;
 }
 
@@ -41,6 +44,11 @@
     a{
         pointer-events: visible;
         text-decoration: none;
+        cursor: pointer;
+    }
+    .number-text {
+        font-size: 42px;
+        font-weight: 300;
     }
     .icon-rewind,
     .icon-forward{
@@ -49,7 +57,18 @@
         font-size: 95px;
         color: #FFF;
         padding: 32px;
-        text-decoration: none;
+        position: relative;
+        > div {
+            .flex-display;
+            .justify-content-center;
+            .align-items-center;
+            .number-text;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         &:hover{
             background: rgba(0, 0, 0, .4);
         }
@@ -66,9 +85,7 @@
         border-top-right-radius: 15px;
         padding: 20px;
         color: #FFF;
-        font-size: 42px;
-        font-weight: 100;
-
+        .number-text;
     }
 
 
