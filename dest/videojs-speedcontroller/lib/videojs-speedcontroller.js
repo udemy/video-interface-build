@@ -41,7 +41,7 @@
         playbackControls.appendChild(rewind);
 
         var speedControl = createElement('div',{
-            className: 'speed-control'
+            className: 'icon-speed-control'
         });
 
         var speedNumber = createElement('span',{
