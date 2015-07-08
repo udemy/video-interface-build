@@ -6,7 +6,7 @@
         }
     ], 
     "dependencies": {
-        "video.js": "https://github.com/udemy/video.js.git#da6e7e39db43496a4406a0f6c8ae117238ab9218", 
+        "video.js": "https://github.com/udemy/video.js.git#125dcbce7a6697b22c3afa6c504c127144f2443c", 
         "videojs-resolution-selector": "https://github.com/udemy/videojs-resolution-selector.git#126f796154329e7b8c6b6e38a219a1014fdfbb63", 
         "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git#4b88d36e10da554354a1208a997aaf2a6c859664", 
         "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git#855ab6097ad9fda16988c206db07e874c1a5e480"
@@ -22,6 +22,6 @@
     "private": false, 
     "version": "0.0.1",
     "resolutions": {
-        "video.js": "da6e7e39db43496a4406a0f6c8ae117238ab9218"
+        "video.js": "125dcbce7a6697b22c3afa6c504c127144f2443c"
     }
 }
