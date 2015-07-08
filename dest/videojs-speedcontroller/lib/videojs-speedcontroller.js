@@ -23,13 +23,17 @@
 
     videojs.SpeedContainer.prototype._createEl = function (tagName, player) {
         var createElement  = videojs.Component.prototype.createEl;
+        var createIcon = function createIcon(iconClass) {
+            var icon = createElement('a', {className: iconClass});
+            icon.appendChild(createElement('div', {'innerHTML': '10'}));
+            return icon;
+        };
+
         var playbackControls = createElement('div',{
             className: 'playback-controls'
         });
 
-        var rewind = createElement('a',{
-            className: 'icon-rewind'
-        });
+        var rewind = createIcon('icon-rewind');
         rewind.onclick = function() {
             player.currentTime(player.currentTime()-10);
         };
@@ -91,9 +95,7 @@
 
         speedControl.appendChild(speedAdjust);
         playbackControls.appendChild(speedControl);
-        var forward = createElement('a',{
-            className: 'icon-forward'
-        });
+        var forward = createIcon('icon-forward');
         forward.onclick = function() {
             player.currentTime(player.currentTime()+10);
         };
