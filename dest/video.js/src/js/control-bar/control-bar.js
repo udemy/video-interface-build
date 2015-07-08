@@ -28,6 +28,6 @@ vjs.ControlBar.prototype.options_ = {
 
 vjs.ControlBar.prototype.createEl = function(){
   return vjs.createEl('div', {
-    className: 'vjs-control-bar active-on-hover'
+    className: 'vjs-control-bar'
   });
 };

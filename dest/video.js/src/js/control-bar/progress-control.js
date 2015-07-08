@@ -21,7 +21,7 @@ vjs.ProgressControl.prototype.options_ = {
 
 vjs.ProgressControl.prototype.createEl = function(){
   return vjs.Component.prototype.createEl.call(this, 'div', {
-    className: 'vjs-progress-control vjs-control active-on-hover'
+    className: 'vjs-progress-control vjs-control'
   });
 };
 

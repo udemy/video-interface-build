@@ -25,12 +25,12 @@
     "build"
   ],
   "homepage": "https://github.com/udemy/video.js",
-  "_release": "125dcbce7a",
+  "_release": "2246eed7f7",
   "_resolution": {
     "type": "commit",
-    "commit": "125dcbce7a6697b22c3afa6c504c127144f2443c"
+    "commit": "2246eed7f701801097db28f5ab82d2642c1bac11"
   },
   "_source": "https://github.com/udemy/video.js.git",
-  "_target": "125dcbce7a6697b22c3afa6c504c127144f2443c",
+  "_target": "2246eed7f701801097db28f5ab82d2642c1bac11",
   "_originalSource": "https://github.com/udemy/video.js.git"
 }
