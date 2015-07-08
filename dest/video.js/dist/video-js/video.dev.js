@@ -5112,6 +5112,7 @@ vjs.Player.prototype.userActive = function(bool){
         // https://code.google.com/p/chromium/issues/detail?id=103041
         if(this.tech) {
           this.tech.one('mousemove', function(e){
+            console.log(e.pageX + ', ' + e.pageY);
             e.stopPropagation();
             e.preventDefault();
           });
