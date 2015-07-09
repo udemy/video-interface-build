@@ -5128,10 +5128,12 @@ vjs.Player.prototype.userActive = function(bool){
 };
 
 vjs.Player.prototype.listenForUserActivity = function(){
-  var onActivity, onMouseMove, onMouseDown, mouseInProgress, onMouseUp,
-      activityCheck, inactivityTimeout, lastMoveX, lastMoveY;
+  var onActivity, onMouseMove, onMouseLeave, onMouseDown, mouseInProgress, onMouseUp,
+      activityCheck, inactivityTimeout, lastMoveX, lastMoveY,
+      lastMoveRelX, lastMoveRelY, activeOnHoverElements;
 
   onActivity = vjs.bind(this, this.reportUserActivity);
+  activeOnHoverElements = document.getElementsByClassName('active-on-hover');
 
   onMouseMove = function(e) {
     // #1068 - Prevent mousemove spamming
@@ -5139,8 +5141,15 @@ vjs.Player.prototype.listenForUserActivity = function(){
     if(e.screenX != lastMoveX || e.screenY != lastMoveY) {
       lastMoveX = e.screenX;
       lastMoveY = e.screenY;
+      lastMoveRelX = e.clientX;
+      lastMoveRelY = e.clientY;
       onActivity();
     }
+  };
+
+  onMouseLeave = function(event) {
+    lastMoveRelX = undefined;
+    lastMoveRelY = undefined;
   };
 
   onMouseDown = function() {
@@ -5164,6 +5173,7 @@ vjs.Player.prototype.listenForUserActivity = function(){
   // Any mouse movement will be considered user activity
   this.on('mousedown', onMouseDown);
   this.on('mousemove', onMouseMove);
+  this.on('mouseleave', onMouseLeave);
   this.on('mouseup', onMouseUp);
 
   // Listen for keyboard navigation
@@ -5196,6 +5206,17 @@ vjs.Player.prototype.listenForUserActivity = function(){
               // Protect against the case where the inactivityTimeout can trigger just
               // before the next user activity is picked up by the activityCheck loop
               // causing a flicker
+              var i, activeOnHoverArea;
+              for(i=0; i<activeOnHoverElements.length; i++) {
+                activeOnHoverArea = activeOnHoverElements[i].getBoundingClientRect();
+                if(
+                  (activeOnHoverArea.left <= lastMoveRelX) && (lastMoveRelX <= activeOnHoverArea.right) &&
+                  (activeOnHoverArea.top <= lastMoveRelY) && (lastMoveRelY <= activeOnHoverArea.bottom)
+                ) {
+                  this.userActivity_ = true;
+                  break;
+                }
+              }
               if (!this.userActivity_) {
                   this.userActive(false);
               }
@@ -5299,7 +5320,7 @@ vjs.ControlBar.prototype.options_ = {
 
 vjs.ControlBar.prototype.createEl = function(){
   return vjs.createEl('div', {
-    className: 'vjs-control-bar'
+    className: 'vjs-control-bar active-on-hover'
   });
 };
 /**
@@ -5522,23 +5543,21 @@ vjs.RemainingTimeDisplay.prototype.updateContent = function(){
  * @class
  * @extends vjs.Button
  */
-vjs.FullscreenToggle = vjs.MenuButton.extend({
+vjs.FullscreenToggle = vjs.Button.extend({
   /**
    * @constructor
    * @memberof vjs.FullscreenToggle
    * @instance
    */
   init: function(player, options){
-    vjs.MenuButton.call(this, player, options);
+    vjs.Button.call(this, player, options);
   }
 });
 
 vjs.FullscreenToggle.prototype.buttonText = 'Fullscreen';
-vjs.FullscreenToggle.prototype.className = 'vjs-fullscreen-control';
 
-vjs.FullscreenToggle.prototype.createMenu = function(){
-  this.options_.title = this.options_.title || this.localize('Fullscreen');
-  return vjs.MenuButton.prototype.createMenu.call(this);
+vjs.FullscreenToggle.prototype.buildCSSClass = function(){
+  return 'vjs-fullscreen-control ' + vjs.Button.prototype.buildCSSClass.call(this);
 };
 
 vjs.FullscreenToggle.prototype.onClick = function(){
@@ -5573,7 +5592,7 @@ vjs.ProgressControl.prototype.options_ = {
 
 vjs.ProgressControl.prototype.createEl = function(){
   return vjs.Component.prototype.createEl.call(this, 'div', {
-    className: 'vjs-progress-control vjs-control'
+    className: 'vjs-progress-control vjs-control active-on-hover'
   });
 };
 
