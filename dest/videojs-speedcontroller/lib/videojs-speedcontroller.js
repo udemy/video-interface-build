@@ -24,7 +24,7 @@
     videojs.SpeedContainer.prototype._createEl = function (tagName, player) {
         var createElement  = videojs.Component.prototype.createEl;
         var createIcon = function createIcon(iconClass) {
-            var icon = createElement('a', {className: iconClass});
+            var icon = createElement('a', {className: 'active-on-hover ' + iconClass});
             icon.appendChild(createElement('div', {'innerHTML': '10'}));
             return icon;
         };
@@ -56,7 +56,7 @@
         });
 
         var speedDown = createElement('a',{
-            className: 'speed-adjust speed-down'
+            className: 'speed-adjust speed-down active-on-hover'
         });
 
         var speedDownIcon = createElement('span',{
@@ -74,7 +74,7 @@
         };
 
         var speedUp = createElement('a',{
-            className: 'speed-adjust speed-up'
+            className: 'speed-adjust speed-up active-on-hover'
 
         });
 

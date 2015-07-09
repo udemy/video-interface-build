@@ -6,10 +6,10 @@
         }
     ], 
     "dependencies": {
-        "video.js": "https://github.com/udemy/video.js.git#f85a6284349f1938dd1801619954973b8f6fbca9", 
+        "video.js": "https://github.com/udemy/video.js.git#8fb9b3bbd5dd76a3a332628d264e4ef4648a3e8f", 
         "videojs-resolution-selector": "https://github.com/udemy/videojs-resolution-selector.git#126f796154329e7b8c6b6e38a219a1014fdfbb63", 
-        "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git#1fa85be70de12a84f3c71f281e6517ecce4f4bc3", 
-        "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git"
+        "videojs-speedcontroller": "https://github.com/udemy/videojs-speedcontroller.git#1cc55982334bb62b2c6e4ffd72f99019dc2cbd49", 
+        "videojs-timer": "https://github.com/burakbostancioglu/videojs-timer.git#855ab6097ad9fda16988c206db07e874c1a5e480"
     }, 
     "description": "Udemy's video interface build.", 
     "homepage": "https://github.com/udemy/video-interface-build", 
@@ -22,6 +22,6 @@
     "private": false, 
     "version": "0.0.1",
     "resolutions": {
-        "video.js": "f85a6284349f1938dd1801619954973b8f6fbca9"
+        "video.js": "8fb9b3bbd5dd76a3a332628d264e4ef4648a3e8f"
     }
 }
