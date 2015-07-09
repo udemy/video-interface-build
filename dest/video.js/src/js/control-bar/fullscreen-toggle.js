@@ -5,21 +5,23 @@
  * @class
  * @extends vjs.Button
  */
-vjs.FullscreenToggle = vjs.Button.extend({
+vjs.FullscreenToggle = vjs.MenuButton.extend({
   /**
    * @constructor
    * @memberof vjs.FullscreenToggle
    * @instance
    */
   init: function(player, options){
-    vjs.Button.call(this, player, options);
+    vjs.MenuButton.call(this, player, options);
   }
 });
 
 vjs.FullscreenToggle.prototype.buttonText = 'Fullscreen';
+vjs.FullscreenToggle.prototype.className = 'vjs-fullscreen-control';
 
-vjs.FullscreenToggle.prototype.buildCSSClass = function(){
-  return 'vjs-fullscreen-control ' + vjs.Button.prototype.buildCSSClass.call(this);
+vjs.FullscreenToggle.prototype.createMenu = function(){
+  this.options_.title = this.options_.title || this.localize('Fullscreen');
+  return vjs.MenuButton.prototype.createMenu.call(this);
 };
 
 vjs.FullscreenToggle.prototype.onClick = function(){
